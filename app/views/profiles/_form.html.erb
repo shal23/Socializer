@@ -1,0 +1,15 @@
+<%= simple_form_for @profile, :html => {:multipart => true} do |f| %>
+  <%= f.error_notification %>
+
+
+     <%= f.input :name %>
+    <%= f.input :about, :input_html => { :class => "span4", :rows => 3} %>
+    <%= f.input :hobbies, :input_html => { :class => "span4", :rows => 3} %>
+    <%= f.input :job, :input_html => { :class => "span4", :rows => 3} %>
+    <%= f.input :avatar, :as => :file %>
+    
+    <%= f.submit 'Create profile', :class => 'btn btn-success' %>
+
+    <%= f.button :submit %>
+
+<% end %>
